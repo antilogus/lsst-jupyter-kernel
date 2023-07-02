@@ -54,4 +54,4 @@ pip install jupyter-server-proxy
 # fake to access python10
 my_python=`which python3.10`
 cd ~/.local/bin
-ln -s ${my_python} .
+ln -sf ${my_python} .
