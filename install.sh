@@ -5,10 +5,10 @@
 #
 case $(uname) in
     "Linux")
-        kernelSpecsDir="${HOME}/.local/share/jupyter/kernels";;
+        kernelSpecsDir="${HOME}/.local/share/jupyter/kernels"
         distribDir='/cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib';;
     "Darwin")
-        kernelSpecsDir="${HOME}/Library/Jupyter/kernels";;
+        kernelSpecsDir="${HOME}/Library/Jupyter/kernels"
         distribDir='/cvmfs/sw.lsst.eu/darwin-x86_64/lsst_distrib';;  
     *)
         echo "unsupported platform"
@@ -52,6 +52,6 @@ pip install ipykernel==‘6.9.1’
 pip install jupyter-server-proxy
 
 # fake to access python10
-my_python=`which python`
+my_python=`which python3.10`
 cd ~/.local/bin
 ln -s ${my_python} .
