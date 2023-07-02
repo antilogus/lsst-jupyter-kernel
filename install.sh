@@ -48,7 +48,7 @@ export dask4in2p3_pkg="git+https://git:oGLyx9HvwybDRxczniFd@gitlab.in2p3.fr/dask
 python -m pip install "${dask4in2p3_pkg}"
 
 # install the other needed package
-pip install ipykernel==‘6.9.1’
+pip install ipykernel=='6.9.1'
 pip install jupyter-server-proxy
 
 # fake to access python10
