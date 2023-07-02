@@ -35,7 +35,7 @@ Execute the instructions below in the computer where you run JupyterLab (e.g. yo
 
 ```
 cd $HOME
-git clone https://github.com/airnandez/lsst-jupyter-kernel.git
+git clone https://github.com/antilogus/lsst-jupyter-kernel.git
 cd lsst-jupyter-kernel
 bash ./install.sh
 rm -r $HOME/lsst-jupyter-kernel
