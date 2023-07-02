@@ -1,0 +1,15 @@
+{
+    "display_name": "lsst_distrib_dask",
+    "language": "python",
+    "env": {
+        "LSST_DISTRIB_RELEASE": "{TODAY_DISTRIB}",
+        "LSST_USE_EXTENDED_CONDA_ENV": "true",
+        "PYTHONPATH":"${PYTHONPATH}:${HOME}/.local/lib/python3.10/site-packages"  ,
+        "PATH":"${PATH}:${HOME}/.local/bin"
+    },
+    "argv": [
+        "{KERNEL_DIR}/lsst-jupyter-kernel-launcher.sh",
+        "-f",
+        "{connection_file}"
+    ]
+}
