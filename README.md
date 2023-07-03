@@ -64,6 +64,37 @@ one available at the moment of the installation of this package .
 To move to a new version of the LSST distribution you will have to
 re-install the full package.
 
+## dask activation in your notebook 
+
+Becarefull that to access your customized  installation of the lsst
+distrib you should point to it in the call to Dask4in2p3 ( see below ,
+and repalce a/antilog by what corresponds to your home at cc ) 
+
+```
+#  check the dask version 
+from dask4in2p3 import dask4in2p3
+import dask
+print(dask4in2p3.version)
+# Importing the class from the module (package.module)
+from dask4in2p3.dask4in2p3 import Dask4in2p3
+# Creating a Dask4in2p3 object  (with a default Python virtual environment)
+# THE FOLLOWING LINE SHOULD BE UPDATED WITH YOUR HOME DIRECTORY 
+#   a/antilog ==> x/xxxxx  
+my_dask4in2p3 = Dask4in2p3('/pbs/home/a/antilog/.local',dask_scheduler_memory=2)
+
+# Launching a dask-scheduler and a dask-worker. 
+# Connecting a client from this notebook to the dask-scheduler 
+client = my_dask4in2p3.new_client(dask_worker_jobs=nb_worker, 
+                                  dask_worker_memory=3,
+                                  dask_worker_time='01:00:00',
+                                 )
+# Using the existing logger provided from the module dask4in2p3 
+logger = my_dask4in2p3.get_logger()
+logger.info(f"Ready to prepare/launch the dask tasks")
+# A pretty display !
+client
+```
+
 ## Credits
 
 ### Author
