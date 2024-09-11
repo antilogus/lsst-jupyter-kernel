@@ -102,6 +102,7 @@ This tool was developed and are maintained by Pierre Antilogus  at [IN2P3 / CNRS
 It is mainly an extention of a package  developed and  maintained by
 Fabio Hernandez at [IN2P3 / CNRS computing center](http://cc.in2p3.fr)
 (Lyon, France) , adding the DASK fucntionalities  to the LSST
-environement. 
+environement.
+Et Voila ! 
 
 
